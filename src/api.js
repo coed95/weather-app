@@ -28,6 +28,7 @@ export async function getWeatherData(cityName) {
     }
     catch (error) {
         console.error("Error fetching weather data: ", error);
+        alert(error);
         throw new Error("Failed to fetch weather data. Please try again later.");
     }
 }
