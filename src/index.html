@@ -14,7 +14,7 @@
 
         <div class="center">
             <div class="form-wrapper">
-                <form class="search-bar">
+                <form class="search-bar" id="searchForm">
                     <input class="input" id="searchBar" type="search" placeholder="Search..." required="" value="">
                     <button class="button orange" id="searchButton" type="button">Search</button>
                 </form>
@@ -22,16 +22,22 @@
         </div>
 
         <div class="right">
-            <button class="button light units" id="unitsButton" type="button">
-                <span>°C</span>
+            <button class="button light scale" id="scaleButton" type="button">
+                <span class="active" id="celsius">°C</span>
                  / 
-                <span>°F</span>
+                <span id="fahreneit">°F</span>
             </button>
         </div>
     </div>
 
     <div class="main">
-
+        <div class="data-wrapper hidden" id="dataWrapper">
+            <h1 class="data" id="name"></h1>
+            <h2 class="data" id="temperature"></h2>
+            <span class="data" id="weather"></span>
+            <span class="data" id="humidity"></span>
+            <span class="data" id="windSpeed"></span>
+        </div>
     </div>
 </body>
 </html>
