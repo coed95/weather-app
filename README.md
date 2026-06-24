@@ -1,161 +1,89 @@
-# Webpack Template
+# Weather App
 
-A reusable Webpack template for JavaScript projects.
+## About
 
-This template includes support for:
+Weather App is a simple web application built as part of The Odin Project curriculum. It allows users to search for any location and view the current weather conditions using the Visual Crossing Weather API.
 
-- JavaScript modules
-- CSS imports
-- HTML template generation
-- Image assets
-- Development server
-- Production builds
+The application displays essential weather information, supports switching between Celsius and Fahrenheit, and updates the page's appearance based on the current weather conditions.
 
-## Project Structure
+## Features
 
-```
-webpack-template/
-├── dist/
-├── node_modules/
-├── src/
-│   ├── index.js
-│   ├── style.css
-│   └── template.html
-├── .gitignore
-├── package-lock.json
-├── package.json
-└── webpack.config.js
-```
+- Search weather by city or location
+- Display current temperature
+- Display "feels like" temperature
+- Display daily high and low temperatures
+- Display humidity
+- Display wind speed
+- Show a short weather description
+- Toggle between Celsius and Fahrenheit
+- Dynamic background based on the current weather
+- Loading and error states while fetching data
 
-## Main Files
+## Built With
 
-### src/index.js
+- HTML5
+- CSS3
+- JavaScript (ES6 Modules)
+- Webpack
+- Visual Crossing Weather API
 
-This is the JavaScript entry point.
-Webpack starts from this file and follows all imports to build the dependency graph.
+## Getting Started
 
-### src/style.css
+### Clone the repository
 
-This file contains the project styles.
-CSS files can be imported directly into JavaScript because this template uses style-loader and css-loader.
-
-### src/template.html
-
-This is the HTML template used by HtmlWebpackPlugin.
-Webpack uses this file to generate the final HTML file inside dist/.
-
-### webpack.config.js
-
-This file contains the Webpack configuration.
-
-It defines:
-- the entry point
-- the output folder
-- development settings
-- loaders
-- plugins
-
-## Webpack Configuration
-
-The `webpack.config.js` file defines how Webpack builds and serves the project.
-
-It starts from the entry point (`./src/index.js`) and builds a dependency graph by following all imports. From there, it bundles everything into a single output file (`main.js`) inside the `dist/` folder. The output directory is automatically cleaned before each build to avoid leftover files.
-
-The configuration runs in development mode by default, which prioritizes faster builds and easier debugging. Source maps are enabled to map bundled code back to the original source files, making debugging more manageable.
-
-A development server is configured to serve the project locally and automatically reload when changes are detected, including updates to the HTML template.
-
-`HtmlWebpackPlugin` is used to generate the final HTML file based on `src/template.html` and automatically inject the bundled JavaScript, removing the need to manage script tags manually.
-
-Loaders extend Webpack’s functionality beyond JavaScript. They allow the project to import and process CSS files, HTML files, and image assets directly within JavaScript modules, ensuring all resources are included in the final bundle.
-
-## Scripts
-
-Install dependencies:
-
-`npm install`
-
-Start development server:
-
-`npm run dev`
-
-Build for production:
-
-`npm run build`
-
-Watch files:
-
-`npm run watch`
-
-## How to Use This Template
-
-### 1. Create a new project from the template
-
-```
-git clone <your-repo-url>
-cd webpack-template
-rm -rf .git
-git init
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
 ```
 
-### 2. Install dependencies
+### Install dependencies
 
-`npm install`
-
-This installs all required packages based on package.json and package-lock.json.
-
-### 3. Start development
-
-`npm run dev`
-
-This starts the Webpack Dev Server and opens the project in your browser.
-
-All changes inside src/ will automatically reload in the browser.
-
-### 4. Work inside the src/ folder
-
-- index.js → main entry point
-- style.css → styles (imported into JS)
-- template.html → base HTML template
-
-Example:
-
-`import "./style.css";`
-
-You should only modify files inside src/. Do not edit dist/ manually.
-
-### 5. Add assets
-
-You can import images directly in JavaScript:
-
-`import image from "./image.png";`
-
-Webpack will process and include them in the final build.
-
-### 6. Build for production
-
-`npm run build`
-
-This generates an optimized version of your project inside the dist/ folder.
-
-### 7. Deploy
-
-Upload the contents of the dist/ folder to your hosting service.
-Do not deploy src/, node_modules/, or configuration files.
-
-### 8. Reuse again
-
-For a new project:
-- copy this template
-- repeat from step 2
-
-## Git Ignore
-
-```
-node_modules/
-dist/
+```bash
+npm install
 ```
 
-node_modules/ is ignored because it can be recreated with npm install.
+### Add your API key
 
-dist/ is ignored because it is generated by Webpack.
+Open `src/weather.js` and replace the placeholder with your own Visual Crossing API key.
+
+```javascript
+const API_KEY = "YOUR_API_KEY";
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Build the project
+
+```bash
+npm run build
+```
+
+## What I Learned
+
+This project helped me practice:
+
+- Working with asynchronous JavaScript using `async` and `await`
+- Fetching data from a REST API
+- Processing JSON responses
+- Handling errors with `try` and `catch`
+- Organizing code into ES6 modules
+- Dynamically updating the DOM
+- Managing application state
+- Creating a responsive interface
+- Styling the page based on API data
+
+## API Key
+
+This project uses the Visual Crossing Weather API.
+
+For educational purposes, the API key is stored in the frontend. In a production application, API keys should be kept on a backend server and never exposed to the client.
+
+## Acknowledgements
+
+This project was completed as part of **The Odin Project**.
+
+Weather data is provided by the **Visual Crossing Weather API**.

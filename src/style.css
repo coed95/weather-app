@@ -1,9 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: rebeccapurple;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.4s ease;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.app {
+  width: min(90%, 500px);
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+input,
+button {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  cursor: pointer;
+}
+
+.weather-card {
+  margin-top: 1.5rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.condition {
+  font-size: 1.3rem;
+}
+
+.error {
+  color: darkred;
+}
+
+.sunny {
+  background: linear-gradient(135deg, #f9d976, #f39f86);
+}
+
+.rainy {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+}
+
+.cloudy {
+  background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
+
+.snowy {
+  background: linear-gradient(135deg, #e6dada, #274046);
+}
+
+.default-weather {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
 }
